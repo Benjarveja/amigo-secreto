@@ -90,6 +90,7 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    display: flex;
 }
 
 /* Estilos de entrada de texto */
@@ -132,6 +133,17 @@ ul {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+}
+
+.name-list {
+    width: 100%;
+    max-width: 600px; /* Coincide con el ancho del input-wrapper */
+}
+
+.name-list li {
+    padding: 12px;
+    border-bottom: 1px solid var(--color-tertiary);
+    text-align: left;
 }
 
 .result-list {
