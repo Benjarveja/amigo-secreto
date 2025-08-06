@@ -21,6 +21,11 @@ function agregarAmigo() {
     actualizarLista();
     nombreInput.value = ''; // Limpiar el campo de texto
     nombreInput.focus(); // Devolver el foco al campo de texto
+
+    // Habilitar el botón de sortear si hay 2 o más amigos
+    if (amigos.length >= 2) {
+        document.getElementById('boton-sortear').disabled = false;
+    }
 }
 
 function sortearAmigo() {
@@ -43,6 +48,9 @@ function reiniciar() {
     document.getElementById('listaAmigos').innerHTML = '';
     document.getElementById('resultado').innerHTML = '';
     document.getElementById('amigo').value = '';
+
+    // Deshabilitar el botón de sortear al reiniciar
+    document.getElementById('boton-sortear').disabled = true;
 }
 
 function actualizarLista() {
